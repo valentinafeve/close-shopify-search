@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopify Search - Find Your Products</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="logo">🛍️ Shopify Search</h1>
+            <p class="tagline">Find the perfect products for you</p>
+        </header>
+
+        <div class="search-section">
+            <div class="search-bar">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="Search for products..." 
+                    autocomplete="off"
+                >
+                <button id="searchButton" class="search-btn">Search</button>
+            </div>
+        </div>
+
+        <div id="messageContainer" class="message-container"></div>
+
+        <div id="loadingSpinner" class="loading-spinner" style="display: none;">
+            <div class="spinner"></div>
+            <p>Searching products...</p>
+        </div>
+
+        <div id="productsGrid" class="products-grid"></div>
+
+        <div id="noResults" class="no-results" style="display: none;">
+            <p>No products found. Try a different search term.</p>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
